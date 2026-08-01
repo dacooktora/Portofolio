@@ -428,21 +428,7 @@ export default function DTECPage() {
                     </div>
 
                     {/* Questions Section - Show placeholders for rounds 1, 2, and 3 */}
-                    {round.id !== 4 && (
-                      <div className="mt-8 space-y-4">
-                        <h4 className="text-xl font-bold text-white mb-4">Questions:</h4>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
-                          {[1, 2, 3, 4, 5].map((questionNum) => (
-                            <Card key={questionNum} className="bg-gray-800/50 border-gray-600/30 p-4 text-center">
-                              <p className="text-gray-400 mb-2 text-sm">Question {questionNum}️⃣</p>
-                              <div className="w-full h-48 md:h-56 bg-gray-700/50 rounded border-2 border-dashed border-gray-600 flex items-center justify-center">
-                                <p className="text-gray-500 text-sm">(foto disini)</p>
-                              </div>
-                            </Card>
-                          ))}
-                        </div>
-                      </div>
-                    )}
+                    
 
                     {/* Round 4 Question */}
                     

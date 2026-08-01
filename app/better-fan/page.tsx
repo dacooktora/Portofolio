@@ -35,7 +35,7 @@ export default function BetterFanPage() {
       title: "THE CHOICE CHALLENGE",
       subtitle: "Multiple Choice Questions",
       icon: <Target className="h-8 w-8" />,
-      image: "https://res.cloudinary.com/ncbsx8go/image/upload/v1785598753/betterfan1_okos4k.jpgg",
+      image: "https://res.cloudinary.com/ncbsx8go/image/upload/v1785598753/betterfan1_okos4k.jpg",
       winners: 5,
       description: "Answer the correct choice questions to win $10 in $BFF tokens",
       color: "from-emerald-500 to-green-600",
@@ -388,16 +388,17 @@ export default function BetterFanPage() {
 
                       <div className="relative">
                         <div className="relative overflow-hidden rounded-xl border border-emerald-500/30 animate-float">
-                          <div className="w-full h-64 bg-gray-700/50 rounded border-2 border-dashed border-gray-600 flex items-center justify-center">
-                            <p className="text-gray-400 text-lg">(foto disini)</p>
-                          </div>
+                          <img
+                            src={round.image}
+                            alt={`Round ${round.id} - ${round.title}`}
+                            className="w-full h-auto object-cover"
+                          />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                         </div>
                       </div>
                     </div>
 
-                    {/* Questions Section - Show actual images for rounds 1, 2, and 3 */}
-                  
+                    {/* Questions Section - Removed */}
                   </CardContent>
                 </Card>
               ))}

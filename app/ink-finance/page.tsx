@@ -411,18 +411,7 @@ export default function InkFinancePage() {
                     )}
 
                     {/* Special section for Round 4 */}
-                    {round.id === 4 && (
-                      <div className="mt-8 space-y-4">
-                        <h4 className="text-xl font-bold text-white mb-4">The Question:</h4>
-                        <Card className="bg-gray-800/50 border-gray-600/30 p-6 text-center">
-                          <div className="w-full h-64 bg-gray-700/50 rounded border-2 border-dashed border-gray-600 overflow-hidden">
-                            <div className="w-full h-full flex items-center justify-center">
-                              <p className="text-gray-500">Tokenomics Chart - Coming Soon</p>
-                            </div>
-                          </div>
-                        </Card>
-                      </div>
-                    )}
+                    
                   </CardContent>
                 </Card>
               ))}

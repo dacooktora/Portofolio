@@ -34,43 +34,37 @@ export default function PlayAIPage() {
       title: "MULTIPLE QUESTION",
       subtitle: "Multiple Choice Challenge",
       icon: <Target className="h-8 w-8" />,
-      image: "/images/season1.jpg",
+      image: "https://res.cloudinary.com/ncbsx8go/image/upload/v1785598794/playai1_kqzugw.jpg",
       winners: 5,
       description: "Answer the correct choice questions to win your share of the prize",
       color: "from-blue-500 to-purple-600",
       date: "12:00 PM UTC, 19th November",
-      questions: Array(5)
-        .fill(null)
-        .map((_, i) => `/images/playai-s1-q${i + 1}.jpg`),
+      questions: [],
     },
     {
       id: 2,
       title: "PUZZLE SCRAMBLE",
       subtitle: "Word Unscrambling Challenge",
       icon: <Puzzle className="h-8 w-8" />,
-      image: "/images/season2.jpg",
+      image: "https://res.cloudinary.com/ncbsx8go/image/upload/v1785598794/playai2_b2ujig.jpg",
       winners: 5,
       description: "Unscramble the words in the image to claim your reward",
       color: "from-purple-500 to-pink-600",
       date: "12:00 PM UTC, 24th November",
-      questions: Array(5)
-        .fill(null)
-        .map((_, i) => `/images/playai-s2-q${i + 1}.jpg`),
+      questions: [],
     },
     {
       id: 3,
       title: "RIDDLE RESOLVER",
       subtitle: "Fill in the Blanks",
       icon: <Brain className="h-8 w-8" />,
-      image: "/images/season3.jpg",
+      image: "https://res.cloudinary.com/ncbsx8go/image/upload/v1785598795/playai3_apfrxe.jpg",
       winners: 5,
       description: "Write the correct answer to fill in the blank spaces",
       color: "from-pink-500 to-red-600",
       date: "12:00 PM UTC, 29th November",
-      questions: Array(5)
-        .fill(null)
-        .map((_, i) => `/images/playai-s3-q${i + 1}.jpg`),
-    },
+      questions: [],
+        },
   ]
 
   return (

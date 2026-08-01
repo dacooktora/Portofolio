@@ -392,23 +392,7 @@ export default function InkFinancePage() {
                     </div>
 
                     {/* Questions Section */}
-                    {round.id !== 4 && (
-                      <div className="mt-8 space-y-4">
-                        <h4 className="text-xl font-bold text-white mb-4">Questions:</h4>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
-                          {[1, 2, 3, 4, 5].map((questionNum) => (
-                            <Card key={questionNum} className="bg-gray-800/50 border-gray-600/30 p-4 text-center">
-                              <p className="text-gray-400 mb-2 text-sm">Question {questionNum}️⃣</p>
-                              <div className="w-full h-48 md:h-56 bg-gray-700/50 rounded border-2 border-dashed border-gray-600 overflow-hidden">
-                                <div className="w-full h-full flex items-center justify-center">
-                                  <p className="text-gray-500 text-xs">Coming Soon</p>
-                                </div>
-                              </div>
-                            </Card>
-                          ))}
-                        </div>
-                      </div>
-                    )}
+                    
 
                     {/* Special section for Round 4 */}
                     

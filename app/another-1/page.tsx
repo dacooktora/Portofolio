@@ -1,0 +1,468 @@
+"use client"
+
+import { useState, useEffect } from "react"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+import {
+  ArrowLeft,
+  Clock,
+  MapPin,
+  Gift,
+  Timer,
+  Users,
+  Trophy,
+  Zap,
+  Star,
+  Target,
+  Brain,
+  Puzzle,
+  Search,
+  CheckCircle,
+} from "lucide-react"
+import Link from "next/link"
+
+export default function Another1Page() {
+  const [isLoaded, setIsLoaded] = useState(false)
+
+  useEffect(() => {
+    setIsLoaded(true)
+  }, [])
+
+  const rounds = [
+    {
+      id: 1,
+      title: "THE CHOICE CHALLENGE",
+      subtitle: "Multiple Choice Questions",
+      icon: <Target className="h-8 w-8" />,
+      image: "/images/round1.jpg",
+      winners: 5,
+      description: "Answer the correct choice questions to win $10 in $ANOTHER tokens",
+      color: "from-blue-500 to-cyan-600",
+      showRoundNumber: false,
+      questions: [
+        "/images/round1-q1.jpg",
+        "/images/round1-q2.jpg",
+        "/images/round1-q3.jpg",
+        "/images/round1-q4.jpg",
+        "/images/round1-q5.jpg",
+      ],
+    },
+    {
+      id: 2,
+      title: "PUZZLE SCRAMBLE",
+      subtitle: "Word Unscrambling Challenge",
+      icon: <Puzzle className="h-8 w-8" />,
+      image: "/images/round2.jpg",
+      winners: 5,
+      description: "Unscramble the words in the image to claim your reward",
+      color: "from-cyan-500 to-blue-600",
+      showRoundNumber: false,
+      questions: [
+        "/images/round2-q1.jpg",
+        "/images/round2-q2.jpg",
+        "/images/round2-q3.jpg",
+        "/images/round2-q4.jpg",
+        "/images/round2-q5.jpg",
+      ],
+    },
+    {
+      id: 3,
+      title: "RIDDLE RESOLVER",
+      subtitle: "Fill in the Blanks",
+      icon: <Brain className="h-8 w-8" />,
+      image: "/images/round3.jpg",
+      winners: 5,
+      description: "Write the correct answer to fill in the blank spaces",
+      color: "from-blue-500 to-indigo-600",
+      showRoundNumber: true,
+      questions: [
+        "/images/round3-q1.jpg",
+        "/images/round3-q2.jpg",
+        "/images/round3-q3.jpg",
+        "/images/round3-q4.jpg",
+        "/images/round3-q5.jpg",
+      ],
+    },
+    {
+      id: 4,
+      title: "COMPLETE THE PUZZLE",
+      subtitle: "Interactive Challenge",
+      icon: <Search className="h-8 w-8" />,
+      image: "/images/round4.jpg",
+      winners: 5,
+      description: "Complete the Another-1 structure puzzle with correct answers",
+      color: "from-cyan-500 to-blue-600",
+      showRoundNumber: false,
+      questions: [], // No questions for round 4
+    },
+  ]
+
+  return (
+    <div className="min-h-screen bg-black text-white overflow-x-hidden">
+      {/* Animated Background */}
+      <div className="fixed inset-0 z-0">
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-cyan-900/20 to-blue-900/20" />
+        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-pulse" />
+        <div
+          className="absolute bottom-20 right-10 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"
+          style={{ animationDelay: "1s" }}
+        />
+        <div
+          className="absolute top-1/2 left-1/2 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl animate-pulse"
+          style={{ animationDelay: "2s" }}
+        />
+      </div>
+
+      {/* Custom CSS for animations */}
+      <style jsx>{`
+        @keyframes float {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-20px); }
+        }
+        @keyframes glow {
+          0%, 100% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.5); }
+          50% { box-shadow: 0 0 40px rgba(59, 130, 246, 0.8), 0 0 60px rgba(59, 130, 246, 0.6); }
+        }
+        @keyframes slideInUp {
+          from { opacity: 0; transform: translateY(50px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInScale {
+          from { opacity: 0; transform: scale(0.8); }
+          to { opacity: 1; transform: scale(1); }
+        }
+        .animate-float { animation: float 6s ease-in-out infinite; }
+        .animate-glow { animation: glow 3s ease-in-out infinite; }
+        .animate-slideInUp { animation: slideInUp 0.8s ease-out forwards; }
+        .animate-fadeInScale { animation: fadeInScale 0.8s ease-out forwards; }
+      `}</style>
+
+      <div className="relative z-10">
+        {/* Header */}
+        <header className="sticky top-0 z-50 bg-black/80 backdrop-blur-md border-b border-blue-500/20">
+          <div className="container mx-auto px-4 py-4">
+            <div className="flex items-center justify-between">
+              <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+                <ArrowLeft className="h-6 w-6 text-blue-400" />
+                <span className="text-lg font-semibold">Back to Portfolio</span>
+              </Link>
+              <div className="flex items-center gap-2">{/* Empty space - logo removed as requested */}</div>
+            </div>
+          </div>
+        </header>
+
+        {/* Hero Section */}
+        <section className="py-20 px-4">
+          <div className="container mx-auto text-center">
+            <div
+              className={`transition-all duration-1000 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+            >
+              <div className="inline-flex items-center gap-3 mb-6">
+                <img src="/L2E - 5.png" alt="Another-1 L2E" className="h-20 w-auto rounded-lg animate-float" />
+              </div>
+
+              <h1 className="text-3xl md:text-6xl font-bold mb-2 bg-gradient-to-r from-blue-400 via-cyan-500 to-blue-600 bg-clip-text text-transparent">
+                Learn To Earn
+              </h1>
+              <h2 className="text-2xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-blue-400 via-cyan-500 to-blue-600 bg-clip-text text-transparent">
+                Sessions 2
+              </h2>
+              <h3 className="text-xl md:text-3xl font-bold mb-6 text-white">Another - 1</h3>
+              <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">By Muhamad Novreysa • March 20, 2024</p>
+
+              {/* Event Details */}
+              <div className="grid md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">
+                <Card
+                  className="bg-gradient-to-br from-blue-900/50 to-cyan-900/50 border-blue-500/30 animate-fadeInScale"
+                  style={{ animationDelay: "0.2s" }}
+                >
+                  <CardContent className="p-6 text-center">
+                    <Clock className="h-8 w-8 text-blue-400 mx-auto mb-3" />
+                    <h3 className="font-bold text-white mb-2">Time</h3>
+                    <p className="text-sm text-gray-300">11:00 AM UTC</p>
+                    <p className="text-sm text-gray-300">March 23, 2024</p>
+                  </CardContent>
+                </Card>
+
+                <Card
+                  className="bg-gradient-to-br from-cyan-900/50 to-blue-900/50 border-cyan-500/30 animate-fadeInScale"
+                  style={{ animationDelay: "0.4s" }}
+                >
+                  <CardContent className="p-6 text-center">
+                    <MapPin className="h-8 w-8 text-cyan-400 mx-auto mb-3" />
+                    <h3 className="font-bold text-white mb-2">Venue</h3>
+                    <p className="text-sm text-gray-300">Telegram Group</p>
+                    <p className="text-sm text-cyan-400">@openpad_official</p>
+                  </CardContent>
+                </Card>
+
+                <Card
+                  className="bg-gradient-to-br from-blue-900/50 to-indigo-900/50 border-blue-500/30 animate-fadeInScale"
+                  style={{ animationDelay: "0.6s" }}
+                >
+                  <CardContent className="p-6 text-center">
+                    <Gift className="h-8 w-8 text-blue-400 mx-auto mb-3" />
+                    <h3 className="font-bold text-white mb-2">Reward</h3>
+                    <p className="text-sm text-gray-300">$200 worth</p>
+                    <p className="text-sm text-blue-400">$ANOTHER Tokens</p>
+                  </CardContent>
+                </Card>
+
+                <Card
+                  className="bg-gradient-to-br from-cyan-900/50 to-blue-900/50 border-cyan-500/30 animate-fadeInScale"
+                  style={{ animationDelay: "0.8s" }}
+                >
+                  <CardContent className="p-6 text-center">
+                    <Timer className="h-8 w-8 text-cyan-400 mx-auto mb-3" />
+                    <h3 className="font-bold text-white mb-2">Duration</h3>
+                    <p className="text-sm text-gray-300">1 Hour</p>
+                    <p className="text-sm text-cyan-400">Interactive Session</p>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Welcome Section */}
+        <section className="py-16 px-4">
+          <div className="container mx-auto max-w-4xl">
+            <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border-blue-500/30 animate-slideInUp">
+              <CardHeader>
+                <div className="flex items-center gap-3">
+                  <Users className="h-8 w-8 text-blue-400" />
+                  <CardTitle className="text-2xl text-white">Hello OpenPad Community!</CardTitle>
+                </div>
+              </CardHeader>
+              <CardContent className="space-y-6">
+                <p className="text-lg text-gray-300">
+                  Welcome to our Learn To Earn session 2 for{" "}
+                  <span className="text-blue-400 font-bold">Another - 1</span>!
+                </p>
+
+                <div className="bg-gradient-to-r from-blue-500/10 to-cyan-500/10 border border-blue-500/30 rounded-lg p-6">
+                  <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                    <Zap className="h-6 w-6 text-cyan-400" />
+                    How This Game Works
+                  </h3>
+                  <div className="space-y-4 text-gray-300 text-justify">
+                    <p>
+                      There will be a total of <span className="text-blue-400 font-bold">4 rounds</span>. In each round,
+                      the host will give a different task and after the task share on group, user can prepare the
+                      correct answer.
+                    </p>
+                    <p>
+                      Once unmuted group, the user can answer. Users who answer correctly and quickly have a chance to
+                      win.
+                    </p>
+                    <p className="text-lg font-bold text-blue-400">
+                      20 total winners to get $10 each in $ANOTHER tokens.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="bg-gradient-to-r from-red-500/10 to-pink-500/10 border border-red-500/30 rounded-lg p-6">
+                  <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                    <CheckCircle className="h-6 w-6 text-red-400" />
+                    Important Notes
+                  </h3>
+                  <ul className="space-y-3 text-gray-300 text-justify">
+                    <li className="flex items-start gap-2">
+                      <span className="text-red-400 font-bold">1.</span>
+                      <span>Any edited answer will automatically be disqualified.</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-red-400 font-bold">2.</span>
+                      <span>
+                        Every answer you submit must include your telegram username and hashtag{" "}
+                        <span className="text-blue-400 font-mono">#L2EAnother1</span>
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-red-400 font-bold">3.</span>
+                      <span>
+                        For tasks involving images from your data, we will choose only valid and authentic entries.
+                        Copied or duplicated submissions will be disregarded.
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-red-400 font-bold">4.</span>
+                      <span>The list of winners will be announced after team is done with reviewing.</span>
+                    </li>
+                  </ul>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
+
+        {/* Rounds Section */}
+        <section className="py-16 px-4">
+          <div className="container mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-cyan-500 bg-clip-text text-transparent">
+                LET'S START THE CHALLENGE!
+              </h2>
+              <p className="text-xl text-gray-300">4 Exciting Rounds Await You</p>
+            </div>
+
+            <div className="grid gap-12 max-w-6xl mx-auto">
+              {rounds.map((round, index) => (
+                <Card
+                  key={round.id}
+                  className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border-blue-500/30 overflow-hidden animate-slideInUp"
+                  style={{ animationDelay: `${index * 0.2}s` }}
+                >
+                  <CardHeader>
+                    <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                      <div className="flex items-center gap-4">
+                        <div className={`p-4 rounded-full bg-gradient-to-r ${round.color}`}>{round.icon}</div>
+                        <div className="flex-1">
+                          {round.showRoundNumber && (
+                            <Badge className="mb-2 bg-blue-500/20 text-blue-400 border-blue-500/30">
+                              ROUND {round.id}
+                            </Badge>
+                          )}
+                          <div className="flex flex-col sm:flex-row sm:items-center sm:gap-4">
+                            <CardTitle className="text-xl md:text-2xl text-white">{round.title}</CardTitle>
+                            <p className="text-gray-400 text-sm md:text-base">{round.subtitle}</p>
+                          </div>
+                          <div className="flex flex-col sm:flex-row sm:items-center sm:gap-4 mt-2">
+                            <div className="flex items-center gap-2 text-green-400">
+                              <Trophy className="h-4 w-4" />
+                              <span className="font-bold text-sm">{round.winners} Winners</span>
+                            </div>
+                            <span className="text-green-400 text-sm">$10 each in $ANOTHER</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </CardHeader>
+
+                  <CardContent>
+                    <div className="grid md:grid-cols-2 gap-8 items-center">
+                      <div className="space-y-6">
+                        <p className="text-lg text-gray-300">{round.description}</p>
+
+                        <div className="bg-gradient-to-r from-blue-500/10 to-cyan-500/10 border border-blue-500/30 rounded-lg p-4">
+                          <h4 className="font-bold text-white mb-3 flex items-center gap-2">
+                            <Star className="h-5 w-5 text-cyan-400" />
+                            Mechanics:
+                          </h4>
+                          <div className="space-y-2 text-gray-300">
+                            {round.id === 1 && (
+                              <>
+                                <p>1️⃣ Answer the correct choice</p>
+                                <p>2️⃣ After group unmute you can submit the answer with format:</p>
+                                <div className="bg-gray-800/50 p-3 rounded border-l-4 border-blue-500 ml-4">
+                                  <p className="text-blue-400 font-mono">Your answer</p>
+                                  <p className="text-blue-400 font-mono">Hashtag #L2EAnother1</p>
+                                </div>
+                              </>
+                            )}
+                            {round.id === 2 && (
+                              <>
+                                <p>1️⃣ Unscramble the words in the image</p>
+                                <p>2️⃣ After group unmute you can submit the answer with format:</p>
+                                <div className="bg-gray-800/50 p-3 rounded border-l-4 border-cyan-500 ml-4">
+                                  <p className="text-cyan-400 font-mono">Your answer</p>
+                                  <p className="text-cyan-400 font-mono">Hashtag #L2EAnother1</p>
+                                </div>
+                              </>
+                            )}
+                            {round.id === 3 && (
+                              <>
+                                <p>1️⃣ Write the correct answer to fill in the blank on the dotted line</p>
+                                <p>2️⃣ After group unmute you can submit the answer with format:</p>
+                                <div className="bg-gray-800/50 p-3 rounded border-l-4 border-blue-500 ml-4">
+                                  <p className="text-blue-400 font-mono">Your answer</p>
+                                  <p className="text-blue-400 font-mono">Hashtag #L2EAnother1</p>
+                                </div>
+                              </>
+                            )}
+                            {round.id === 4 && (
+                              <>
+                                <p>1️⃣ Check out the structure SETBACKS FOR Another-1 on the Gitbook Another-1</p>
+                                <p>2️⃣ Download the image and write your correct answer above the RED ARROW</p>
+                                <p>3️⃣ Enter your Telegram username and hashtag #L2EAnother1 in the RED BOX</p>
+                                <p>4️⃣ Send the image with your correct answer to the group</p>
+                              </>
+                            )}
+                          </div>
+                        </div>
+
+                        <div className="text-center">
+                          <p className="text-lg font-bold text-green-400">
+                            🎁 The fastest and correct answer will win $10 in $ANOTHER!
+                          </p>
+                        </div>
+                      </div>
+
+                      <div className="relative">
+                        <div className="relative overflow-hidden rounded-xl border border-blue-500/30 animate-float">
+                          <img
+                            src={round.image || "/placeholder.svg"}
+                            alt={`Round ${round.id} - ${round.title}`}
+                            className="w-full h-auto object-cover"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Questions Section - Show actual images for rounds 1, 2, and 3 */}
+                    {round.id !== 4 && (
+                      <div className="mt-8 space-y-4">
+                        <h4 className="text-xl font-bold text-white mb-4">Questions:</h4>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+                          {[1, 2, 3, 4, 5].map((questionNum) => (
+                            <Card key={questionNum} className="bg-gray-800/50 border-gray-600/30 p-4 text-center">
+                              <p className="text-gray-400 mb-2 text-sm">Question {questionNum}️⃣</p>
+                              <div className="w-full h-48 md:h-56 bg-gray-700/50 rounded border-2 border-dashed border-gray-600 overflow-hidden">
+                                {round.questions && round.questions[questionNum - 1] ? (
+                                  <img
+                                    src={round.questions[questionNum - 1] || "/placeholder.svg"}
+                                    alt={`Round ${round.id} Question ${questionNum}`}
+                                    className="w-full h-full object-contain rounded"
+                                  />
+                                ) : (
+                                  <div className="w-full h-full flex items-center justify-center">
+                                    <p className="text-gray-500 text-xs">Coming Soon</p>
+                                  </div>
+                                )}
+                              </div>
+                            </Card>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Footer */}
+        <footer className="py-12 px-4 border-t border-blue-500/20">
+          <div className="container mx-auto text-center">
+            <div className="flex items-center justify-center gap-3 mb-4">
+              <img src="/L2E - 5.png" alt="Another-1 L2E" className="h-8 w-8 rounded" />
+              <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-500 bg-clip-text text-transparent">
+                Good Luck to All Participants!
+              </h3>
+            </div>
+            <p className="text-gray-400 mb-6">May the fastest and smartest win! 🚀</p>
+            <Link href="/">
+              <Button className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700 text-white px-8 py-3">
+                <ArrowLeft className="mr-2 h-5 w-5" />
+                Back to Portfolio
+              </Button>
+            </Link>
+          </div>
+        </footer>
+      </div>
+    </div>
+  )
+}

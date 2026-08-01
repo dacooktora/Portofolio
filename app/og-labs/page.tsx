@@ -3,7 +3,9 @@
 import { useState, useEffect } from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Calendar, Clock, MapPin, Gift, Users, Trophy, Star, Zap } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { Calendar, Clock, MapPin, Gift, Users, Trophy, Star, Zap, ArrowLeft } from "lucide-react"
+import Link from "next/link"
 
 export default function ZeroGLabsPage() {
   const [mounted, setMounted] = useState(false)
@@ -33,21 +35,21 @@ export default function ZeroGLabsPage() {
       <div className="relative z-10 container mx-auto px-4 py-8">
         {/* Header */}
         <div className="text-center mb-12 animate-slideInUp">
-  <div className="flex items-center justify-center gap-3 mb-6">
-    <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-full flex items-center justify-center animate-float overflow-hidden">
-      <img 
-        src="/L2E - 12.png" 
-        alt="Logo" 
-        className="w-full h-full object-cover"
-      />
-    </div>
-    <div>
-      <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-blue-400 to-gray-300 bg-clip-text text-transparent">
-        0G Foundation
-      </h1>
-      <p className="text-xl text-gray-300 mt-2">Learn To Earn Sessions</p>
-    </div>
-  </div>
+          <div className="flex items-center justify-center gap-3 mb-6">
+            <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-full flex items-center justify-center animate-float overflow-hidden">
+              <img 
+                src="/L2E - 12.png" 
+                alt="Logo" 
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div>
+              <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-blue-400 to-gray-300 bg-clip-text text-transparent">
+                0G Foundation
+              </h1>
+              <p className="text-xl text-gray-300 mt-2">Learn To Earn Sessions</p>
+            </div>
+          </div>
 
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             <Badge variant="secondary" className="bg-purple-500/20 text-purple-300 border-purple-500/30 px-4 py-2">
@@ -391,7 +393,6 @@ export default function ZeroGLabsPage() {
         </Card>
 
         {/* Footer */}
-        {/* Footer */}
         <footer className="py-12 px-4 border-t border-blue-500/20">
           <div className="container mx-auto text-center">
             <div className="flex items-center justify-center gap-3 mb-4">
@@ -409,6 +410,7 @@ export default function ZeroGLabsPage() {
             </Link>
           </div>
         </footer>
+      </div>
 
       <style jsx>{`
         @keyframes float {
@@ -431,7 +433,8 @@ export default function ZeroGLabsPage() {
         .animate-slideInUp { animation: slideInUp 0.8s ease-out; }
         .animate-fadeInScale { animation: fadeInScale 0.6s ease-out; }
         .animate-glow { animation: glow 2s ease-in-out infinite; }
-      `}</style>
+      `}
+      </style>
     </div>
   )
 }

@@ -66,6 +66,19 @@ export default function ZeroGLabsPage() {
       showRoundNumber: true,
       questions: [],
     },
+    {
+      id: 4,
+      title: "COMPLETE THE PUZZLE",
+      subtitle: "Interactive Challenge",
+      icon: <Search className="h-8 w-8" />,
+      image: "https://res.cloudinary.com/ncbsx8go/image/upload/v1785598793/og4_qlx6mi.jpg",
+      winners: 5,
+      description: "Complete the puzzle with correct answers",
+      color: "from-blue-500 to-purple-600",
+      showRoundNumber: false,
+      questions: [],
+    },
+    
   ]
 
   return (

@@ -144,7 +144,7 @@ export default function Portfolio() {
       level: "University",
       school: "Universitas Pelita Bangsa",
       degree: "Bachelor of Digital Business",
-      period: "2022 - Present",
+      period: "2022 - 2026",
       gpa: "3.9/4.0",
       achievements: [
         "Field Trip UMKM Subang 2023",
@@ -158,7 +158,7 @@ export default function Portfolio() {
     {
       title: "Community Manager",
       company: "OpenPad",
-      period: "Feb 2024 - Oct 2025",
+      period: "Feb 2024 - Jan 2026",
       description: "",
       achievements: ["L2E Content Strategy", "Community Growth", "10% Participation Increase"],
     },
@@ -186,7 +186,7 @@ export default function Portfolio() {
     {
       title: "Community Moderator",
       company: "IntelliShare",
-      period: "Jan 2019 - Apr 2020",
+      period: "Jan 2019 - Mei 2019",
       description: "",
       achievements: ["Community Moderation", "Content Management", "Community Support"],
     },
@@ -484,7 +484,7 @@ export default function Portfolio() {
         <div className="container mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
             <div className="text-2xl font-bold bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">
-              Novreysa
+              Muhamad Novreysa
             </div>
 
             {/* Desktop Menu */}
@@ -553,14 +553,14 @@ export default function Portfolio() {
                 Get In Touch
               </Button>
               <Button
-                variant="outline"
-                className="border-green-500 text-green-400 hover:bg-green-500 hover:text-black px-8 py-3 text-lg bg-transparent"
-                onClick={() => window.open("/Muhamad%20Novreysa%20-%20CV.pdf", "_blank")}
-                aria-label="Download CV PDF"
-              >
-                <Download className="mr-2 h-5 w-5" />
-                Download CV
-              </Button>
+  variant="outline"
+  className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white px-8 py-3 text-lg"
+  onClick={() => window.open("https://res.cloudinary.com/ncbsx8go/image/upload/v1785627124/Muhamad_Novreysa_-_Curriculum_Vitae_20260802_063127_0000_z9p9n4.png", "_blank")}
+  aria-label="Download CV"
+>
+  <Download className="mr-2 h-5 w-5" />
+  Download CV
+</Button>
             </div>
           </div>
         </div>
@@ -647,10 +647,10 @@ export default function Portfolio() {
               <div className="space-y-6">
                 <p className="text-base sm:text-lg text-gray-300 leading-relaxed text-justify">
                   I'm a passionate crypto enthusiast who has been actively involved in the blockchain space since 2018.
-                  My expertise spans across DeFi, Web3, and blockchain gaming sectors.
+                  My expertise spans across DeFi, Web3, Gaming, etc.
                 </p>
                 <p className="text-base sm:text-lg text-gray-300 leading-relaxed text-justify">
-                  I excel at building and managing communities, designing effective marketing strategies, and
+                  I excel at building and managing communities, designing effective marketing strategies &
                   strengthening relationships with key opinion leaders to increase project visibility and credibility.
                 </p>
                 <p className="text-base sm:text-lg text-gray-300 leading-relaxed text-justify">

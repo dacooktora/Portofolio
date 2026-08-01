@@ -153,7 +153,23 @@ export default function Portfolio() {
       ],
     },
   ]
+// Certificates shown in the carousel below the education achievements.
+  const certificates = [
+    { id: 1, title: "Narasumber Seminar - Starting Kit to Become Freelancer", image: "/narasumber-seminar.jpg" },
+    { id: 2, title: "Peserta ESCA - Lomba Menulis Esai", image: "/esca.jpg" },
+    { id: 3, title: "Machine Learning For Beginner - Bisa.ai", image: "/data-analyst.jpg" },
+  ]
 
+  const handlePrevCertificate = () => {
+    setCertDirection("left")
+    setCertificateIndex((prev) => (prev - 1 + certificates.length) % certificates.length)
+  }
+
+  const handleNextCertificate = () => {
+    setCertDirection("right")
+    setCertificateIndex((prev) => (prev + 1) % certificates.length)
+  }
+  
   const experiences = [
     {
       title: "Community Manager",
@@ -743,6 +759,64 @@ export default function Portfolio() {
                       </ul>
                     </div>
                   </div>
+                  {/* Sertifikat Carousel */}
+                  <div className="mt-8 pt-8 border-t border-green-500/20">
+                    <h4 className="font-semibold text-white mb-6 text-center">Sertifikat</h4>
+                    <div className="relative max-w-xs sm:max-w-sm md:max-w-md mx-auto">
+                      <button
+                        onClick={handlePrevCertificate}
+                        aria-label="Sertifikat sebelumnya"
+                        className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-3 sm:-translate-x-14 z-10 flex items-center justify-center h-10 w-10 rounded-full bg-gray-800/90 border border-green-500/30 text-green-400 hover:bg-green-500 hover:text-black hover:scale-110 active:scale-95 transition-all duration-300 shadow-lg shadow-black/40"
+                      >
+                        <ChevronLeft className="h-5 w-5" />
+                      </button>
+
+                      <div className="overflow-hidden rounded-xl border border-green-500/20 bg-gray-800/50 aspect-[4/3]">
+                        <img
+                          key={certificateIndex}
+                          src={certificates[certificateIndex].image || "/placeholder.svg"}
+                          alt={certificates[certificateIndex].title}
+                          className={`w-full h-full object-contain ${
+                            certDirection === "right" ? "animate-slideFromRight" : "animate-slideFromLeft"
+                          }`}
+                        />
+                      </div>
+
+                      <button
+                        onClick={handleNextCertificate}
+                        aria-label="Sertifikat berikutnya"
+                        className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-3 sm:translate-x-14 z-10 flex items-center justify-center h-10 w-10 rounded-full bg-gray-800/90 border border-green-500/30 text-green-400 hover:bg-green-500 hover:text-black hover:scale-110 active:scale-95 transition-all duration-300 shadow-lg shadow-black/40"
+                      >
+                        <ChevronRight className="h-5 w-5" />
+                      </button>
+                    </div>
+
+                    <p
+                      key={`title-${certificateIndex}`}
+                      className={`text-center text-sm text-gray-300 mt-4 max-w-md mx-auto ${
+                        certDirection === "right" ? "animate-slideFromRight" : "animate-slideFromLeft"
+                      }`}
+                    >
+                      {certificates[certificateIndex].title}
+                    </p>
+
+                    <div className="flex justify-center gap-2 mt-5">
+                      {certificates.map((cert, i) => (
+                        <button
+                          key={cert.id}
+                          onClick={() => {
+                            setCertDirection(i > certificateIndex ? "right" : "left")
+                            setCertificateIndex(i)
+                          }}
+                          aria-label={`Ke sertifikat ${i + 1}`}
+                          className={`h-2 rounded-full transition-all duration-300 ${
+                            i === certificateIndex ? "w-6 bg-green-400" : "w-2 bg-gray-600 hover:bg-gray-500"
+                          }`}
+                        />
+                      ))}
+                    </div>
+                  </div>
+          
                 </CardContent>
               </Card>
             ))}

@@ -394,16 +394,17 @@ export default function AstraNovaPage() {
 
                       <div className="relative">
                         <div className="relative overflow-hidden rounded-xl border border-violet-500/30 animate-float">
-                          <div className="w-full h-64 bg-gray-700/50 rounded border-2 border-dashed border-gray-600 flex items-center justify-center">
-                            <p className="text-gray-400 text-lg">(foto disini)</p>
-                          </div>
+                          <img
+                            src={round.image}
+                            alt={`Round ${round.id} - ${round.title}`}
+                            className="w-full h-auto object-cover"
+                          />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                         </div>
                       </div>
                     </div>
 
-                    {/* Questions Section - Show actual images for rounds 1, 2, and 3 */}
-                    
+                    {/* Questions Section - Removed */}
                   </CardContent>
                 </Card>
               ))}

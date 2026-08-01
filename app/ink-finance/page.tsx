@@ -35,46 +35,40 @@ export default function InkFinancePage() {
       title: "THE CHOICE CHALLENGE",
       subtitle: "Multiple Choice Questions",
       icon: <Target className="h-8 w-8" />,
-      image: "/images/round1.jpg",
+      image: "https://res.cloudinary.com/ncbsx8go/image/upload/v1785598795/ink1_xrl2fl.jpg",
       winners: 5,
       description: "Answer the correct choice questions to win $10 in $QUILL tokens",
       color: "from-blue-500 to-purple-600",
-      questions: Array(5)
-        .fill(null)
-        .map((_, i) => `/images/ink-r1-q${i + 1}.jpg`),
+      questions: [],
     },
     {
       id: 2,
       title: "PUZZLE SCRAMBLE",
       subtitle: "Word Unscrambling Challenge",
       icon: <Puzzle className="h-8 w-8" />,
-      image: "/images/round2.jpg",
+      image: "https://res.cloudinary.com/ncbsx8go/image/upload/v1785598796/ink2_otmd5n.jpg",
       winners: 5,
       description: "Unscramble the words in the image to claim your reward",
       color: "from-purple-500 to-pink-600",
-      questions: Array(5)
-        .fill(null)
-        .map((_, i) => `/images/ink-r2-q${i + 1}.jpg`),
+      questions: [],
     },
     {
       id: 3,
       title: "RIDDLE RESOLVER",
       subtitle: "Fill in the Blanks",
       icon: <Brain className="h-8 w-8" />,
-      image: "/images/round3.jpg",
+      image: "https://res.cloudinary.com/ncbsx8go/image/upload/v1785598796/ink3_lstyap.jpg",
       winners: 5,
       description: "Write the correct answer to fill in the blank spaces",
       color: "from-pink-500 to-red-600",
-      questions: Array(5)
-        .fill(null)
-        .map((_, i) => `/images/ink-r3-q${i + 1}.jpg`),
+      questions: [],
     },
     {
       id: 4,
       title: "COMPLETE THE PUZZLE",
       subtitle: "Interactive Challenge",
       icon: <Search className="h-8 w-8" />,
-      image: "/images/round4.jpg",
+      image: "https://res.cloudinary.com/ncbsx8go/image/upload/v1785598797/ink4_jtj02d.jpg",
       winners: 5,
       description: "Complete the tokenomics puzzle with correct answers",
       color: "from-orange-500 to-yellow-600",

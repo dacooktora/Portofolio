@@ -35,61 +35,43 @@ export default function Another1Page() {
       title: "THE CHOICE CHALLENGE",
       subtitle: "Multiple Choice Questions",
       icon: <Target className="h-8 w-8" />,
-      image: "/images/round1.jpg",
+      image: "https://res.cloudinary.com/ncbsx8go/image/upload/v1785622941/20260802_052028_wcb91s.jpg",
       winners: 5,
       description: "Answer the correct choice questions to win $10 in $ANOTHER tokens",
       color: "from-blue-500 to-cyan-600",
       showRoundNumber: false,
-      questions: [
-        "/images/round1-q1.jpg",
-        "/images/round1-q2.jpg",
-        "/images/round1-q3.jpg",
-        "/images/round1-q4.jpg",
-        "/images/round1-q5.jpg",
-      ],
+      questions: [],
     },
     {
       id: 2,
       title: "PUZZLE SCRAMBLE",
       subtitle: "Word Unscrambling Challenge",
       icon: <Puzzle className="h-8 w-8" />,
-      image: "/images/round2.jpg",
+      image: "https://res.cloudinary.com/ncbsx8go/image/upload/v1785622941/20260802_052033_t7dy1n.jpg",
       winners: 5,
       description: "Unscramble the words in the image to claim your reward",
       color: "from-cyan-500 to-blue-600",
       showRoundNumber: false,
-      questions: [
-        "/images/round2-q1.jpg",
-        "/images/round2-q2.jpg",
-        "/images/round2-q3.jpg",
-        "/images/round2-q4.jpg",
-        "/images/round2-q5.jpg",
-      ],
+      questions: [],
     },
     {
       id: 3,
       title: "RIDDLE RESOLVER",
       subtitle: "Fill in the Blanks",
       icon: <Brain className="h-8 w-8" />,
-      image: "/images/round3.jpg",
+      image: "https://res.cloudinary.com/ncbsx8go/image/upload/v1785622941/20260802_052154_w1basz.jpg",
       winners: 5,
       description: "Write the correct answer to fill in the blank spaces",
       color: "from-blue-500 to-indigo-600",
       showRoundNumber: true,
-      questions: [
-        "/images/round3-q1.jpg",
-        "/images/round3-q2.jpg",
-        "/images/round3-q3.jpg",
-        "/images/round3-q4.jpg",
-        "/images/round3-q5.jpg",
-      ],
+      questions: [],
     },
     {
       id: 4,
       title: "COMPLETE THE PUZZLE",
       subtitle: "Interactive Challenge",
       icon: <Search className="h-8 w-8" />,
-      image: "/images/round4.jpg",
+      image: "https://res.cloudinary.com/ncbsx8go/image/upload/v1785622941/20260802_052042_lwahda.jpg",
       winners: 5,
       description: "Complete the Another-1 structure puzzle with correct answers",
       color: "from-cyan-500 to-blue-600",
@@ -412,31 +394,7 @@ export default function Another1Page() {
                     </div>
 
                     {/* Questions Section - Show actual images for rounds 1, 2, and 3 */}
-                    {round.id !== 4 && (
-                      <div className="mt-8 space-y-4">
-                        <h4 className="text-xl font-bold text-white mb-4">Questions:</h4>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
-                          {[1, 2, 3, 4, 5].map((questionNum) => (
-                            <Card key={questionNum} className="bg-gray-800/50 border-gray-600/30 p-4 text-center">
-                              <p className="text-gray-400 mb-2 text-sm">Question {questionNum}️⃣</p>
-                              <div className="w-full h-48 md:h-56 bg-gray-700/50 rounded border-2 border-dashed border-gray-600 overflow-hidden">
-                                {round.questions && round.questions[questionNum - 1] ? (
-                                  <img
-                                    src={round.questions[questionNum - 1] || "/placeholder.svg"}
-                                    alt={`Round ${round.id} Question ${questionNum}`}
-                                    className="w-full h-full object-contain rounded"
-                                  />
-                                ) : (
-                                  <div className="w-full h-full flex items-center justify-center">
-                                    <p className="text-gray-500 text-xs">Coming Soon</p>
-                                  </div>
-                                )}
-                              </div>
-                            </Card>
-                          ))}
-                        </div>
-                      </div>
-                    )}
+                    
                   </CardContent>
                 </Card>
               ))}

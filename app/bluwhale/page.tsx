@@ -35,7 +35,7 @@ export default function BluWhalePage() {
       title: "THE CHOICE CHALLENGE",
       subtitle: "Multiple Choice Questions",
       icon: <Target className="h-8 w-8" />,
-      image: "https://res.cloudinary.com/ncbsx8go/image/upload/v1785595919/orangedx_1_pmvggo.jpg",
+      image: "https://res.cloudinary.com/ncbsx8go/image/upload/v1785624575/Blue_Futuristic_Illustrative_Artificial_Intelligence_Project_Presentation_20260802_054926_0000_za1ftw.png",
       winners: 5,
       description: "Answer the correct choice questions to win $10 in USDT",
       color: "from-blue-500 to-cyan-600",
@@ -48,7 +48,7 @@ export default function BluWhalePage() {
       title: "PUZZLE SCRAMBLE",
       subtitle: "Word Unscrambling Challenge",
       icon: <Puzzle className="h-8 w-8" />,
-      image: "https://res.cloudinary.com/ncbsx8go/image/upload/v1785595919/orangedx_2_b7umvl.jpg",
+      image: "https://res.cloudinary.com/ncbsx8go/image/upload/v1785624521/12_20260802_054724_0001_bxgjxp.png",
       winners: 5,
       description: "Unscramble the words in the image to claim your reward",
       color: "from-cyan-500 to-teal-600",
@@ -61,7 +61,7 @@ export default function BluWhalePage() {
       title: "RIDDLE RESOLVER",
       subtitle: "Fill in the Blanks",
       icon: <Brain className="h-8 w-8" />,
-      image: "https://res.cloudinary.com/ncbsx8go/image/upload/v1785595919/orangedx_3_sphmay.jpg",
+      image: "https://res.cloudinary.com/ncbsx8go/image/upload/v1785624521/18_20260802_054724_0002_xeb4az.png",
       winners: 5,
       description: "Write the correct answer to fill in the blank spaces",
       color: "from-teal-500 to-blue-600",
@@ -132,7 +132,7 @@ export default function BluWhalePage() {
               className={`transition-all duration-1000 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
             >
               <div className="inline-flex items-center gap-3 mb-6">
-                <img src="/L2E - 2.png" alt="BluWhale L2E" className="h-20 w-auto rounded-lg animate-float" />
+                <img src="/L2E - 11.png" alt="BluWhale L2E" className="h-20 w-auto rounded-lg animate-float" />
               </div>
 
               <h1 className="text-3xl md:text-6xl font-bold mb-2 bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-400 bg-clip-text text-transparent">
@@ -389,7 +389,7 @@ export default function BluWhalePage() {
         <footer className="py-12 px-4 border-t border-blue-500/20">
           <div className="container mx-auto text-center">
             <div className="flex items-center justify-center gap-3 mb-4">
-              <img src="/L2E - 2.png" alt="BluWhale L2E" className="h-8 w-8 rounded" />
+              <img src="/L2E - 11.png" alt="BluWhale L2E" className="h-8 w-8 rounded" />
               <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-teal-400 bg-clip-text text-transparent">
                 Good Luck to All Participants!
               </h3>

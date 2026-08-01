@@ -10,6 +10,20 @@ import Link from "next/link"
 export default function RuneMinePage() {
   const [isLoaded, setIsLoaded] = useState(false)
 
+  // Data gambar untuk 10 pertanyaan
+  const questionImages = [
+    "https://res.cloudinary.com/ncbsx8go/image/upload/v1785621580/20260802_045902_hfll2y.jpg",
+    "https://res.cloudinary.com/ncbsx8go/image/upload/v1785621580/20260802_045904_xstbti.jpg",
+    "https://res.cloudinary.com/ncbsx8go/image/upload/v1785621581/20260802_045906_fl0ssh.jpg",
+    "https://res.cloudinary.com/ncbsx8go/image/upload/v1785621581/20260802_045907_hernwv.jpg",
+    "https://res.cloudinary.com/ncbsx8go/image/upload/v1785621581/20260802_045909_unqxlm.jpg",
+    "https://res.cloudinary.com/ncbsx8go/image/upload/v1785621581/20260802_045911_a8tct3.jpg",
+    "https://res.cloudinary.com/ncbsx8go/image/upload/v1785621582/20260802_045913_s4gavw.jpg",
+    "https://res.cloudinary.com/ncbsx8go/image/upload/v1785621581/20260802_045915_avefaa.jpg",
+    "https://res.cloudinary.com/ncbsx8go/image/upload/v1785621582/20260802_045917_ywgrti.jpg",
+    "https://res.cloudinary.com/ncbsx8go/image/upload/v1785621582/20260802_045919_kjdkmx.jpg",
+  ]
+
   useEffect(() => {
     setIsLoaded(true)
   }, [])
@@ -276,7 +290,11 @@ export default function RuneMinePage() {
 
                     <div className="relative">
                       <div className="relative overflow-hidden rounded-xl border border-orange-500/30 animate-float">
-                        <img src="/placeholder.svg" alt="RuneMine Challenge" className="w-full h-auto object-cover" />
+                        <img
+                          src="https://res.cloudinary.com/ncbsx8go/image/upload/v1785621324/20260802_045452_q21dan.jpg"
+                          alt="RuneMine Challenge"
+                          className="w-full h-auto object-cover"
+                        />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                       </div>
                     </div>
@@ -292,9 +310,17 @@ export default function RuneMinePage() {
                             Question {questionNum === 10 ? "1⃣0⃣" : `${questionNum}⃣`}
                           </p>
                           <div className="w-full h-48 md:h-56 bg-gray-700/50 rounded border-2 border-dashed border-gray-600 overflow-hidden">
-                            <div className="w-full h-full flex items-center justify-center">
-                              <p className="text-gray-500 text-xs">Coming Soon</p>
-                            </div>
+                            {questionImages[questionNum - 1] ? (
+                              <img
+                                src={questionImages[questionNum - 1]}
+                                alt={`Question ${questionNum}`}
+                                className="w-full h-full object-cover rounded"
+                              />
+                            ) : (
+                              <div className="w-full h-full flex items-center justify-center">
+                                <p className="text-gray-500 text-xs">Coming Soon</p>
+                              </div>
+                            )}
                           </div>
                         </Card>
                       ))}

@@ -22,6 +22,8 @@ import {
   MessageSquare,
   Send,
   ChevronDown,
+  ChevronLeft,
+  ChevronRight,
   Menu,
   X,
   ArrowRight,

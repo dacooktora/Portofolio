@@ -108,6 +108,8 @@ export default function Portfolio() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isLoaded, setIsLoaded] = useState(false)
   const [applyOpen, setApplyOpen] = useState(false)
+  const [certificateIndex, setCertificateIndex] = useState(0)
+  const [certDirection, setCertDirection] = useState<"left" | "right">("right")
   const router = useRouter()
 
   useEffect(() => {
